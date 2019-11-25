@@ -13,19 +13,19 @@
 
 Installation via `npm`:
 
-     npm install http-server -g
+     npm install fabrick-http-server -g
 
-This will install `http-server` globally so that it may be run from the command line.
+This will install `fabrick-http-server` globally so that it may be run from the command line.
 
 ## Running on-demand:
 
 Using `npx` you can run the script without installing it first:
 
-     npx http-server [path] [options]
+     npx fabrick-http-server [path] [options]
 
 ## Usage:
 
-     http-server [path] [options]
+     fabrick-http-server [path] [options]
 
 `[path]` defaults to `./public` if the folder exists, and `./` otherwise.
 
@@ -89,7 +89,7 @@ Using `npx` you can run the script without installing it first:
 To implement a catch-all redirect, use the index page itself as the proxy with:
 
 ```
-http-server --proxy http://localhost:8080?
+fabrick-http-server --proxy http://localhost:8080?
 ```
 
 Note the `?` at the end of the proxy URL. Thanks to [@houston3](https://github.com/houston3) for this clever hack!
@@ -108,7 +108,7 @@ Checkout this repository locally, then:
 
 ```sh
 $ npm i
-$ node bin/http-server
+$ node bin/fabrick-http-server
 ```
 
 *Now you can visit http://localhost:8080 to view your server*

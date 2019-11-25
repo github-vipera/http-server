@@ -1,8 +1,8 @@
 {
-  "name": "http-server",
-  "version": "0.11.1",
+  "name": "fabrick-http-server",
+  "version": "0.11.2",
   "description": "A simple zero-configuration command-line http server",
-  "main": "./lib/http-server",
+  "main": "./lib/fabrick-http-server",
   "repository": {
     "type": "git",
     "url": "git://github.com/indexzero/http-server.git"
@@ -14,8 +14,8 @@
     "server"
   ],
   "scripts": {
-    "start": "node ./bin/http-server",
-    "pretest": "common bin/http-server lib/ test",
+    "start": "node ./bin/fabrick-http-server",
+    "pretest": "common bin/fabrick-http-server lib/ test",
     "test": "vows --spec --isolate"
   },
   "files": [
@@ -101,7 +101,7 @@
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
-    "http-server": "./bin/http-server",
-    "hs": "./bin/http-server"
+    "fabrick-http-server": "./bin/fabrick-http-server",
+    "hs": "./bin/fabrick-http-server"
   }
 }

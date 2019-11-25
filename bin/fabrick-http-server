@@ -4,7 +4,7 @@
 
 var colors     = require('colors/safe'),
     os         = require('os'),
-    httpServer = require('../lib/http-server'),
+    httpServer = require('../lib/fabrick-http-server'),
     portfinder = require('portfinder'),
     opener     = require('opener'),
     fs         = require('fs'),
@@ -15,11 +15,11 @@ var colors     = require('colors/safe'),
 
 var ifaces = os.networkInterfaces();
 
-process.title = 'http-server';
+process.title = 'fabrick-http-server';
 
 if (argv.h || argv.help) {
   console.log([
-    'usage: http-server [path] [options]',
+    'usage: fabrick-http-server [path] [options]',
     '',
     'options:',
     '  -p --port    Port to use [8080]',
@@ -161,7 +161,7 @@ function listen(port) {
     var canonicalHost = host === '0.0.0.0' ? '127.0.0.1' : host,
         protocol      = ssl ? 'https://' : 'http://';
 
-    logger.info([colors.yellow('Starting up http-server, serving '),
+    logger.info([colors.yellow('Starting up fabrick-http-server, serving '),
       colors.cyan(server.root),
       ssl ? (colors.yellow(' through') + colors.cyan(' https')) : '',
       colors.yellow('\nAvailable on:')
@@ -206,11 +206,11 @@ if (process.platform === 'win32') {
 }
 
 process.on('SIGINT', function () {
-  logger.info(colors.red('http-server stopped.'));
+  logger.info(colors.red('fabrick-http-server stopped.'));
   process.exit();
 });
 
 process.on('SIGTERM', function () {
-  logger.info(colors.red('http-server stopped.'));
+  logger.info(colors.red('fabrick-http-server stopped.'));
   process.exit();
 });
